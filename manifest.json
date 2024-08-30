@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "vulcan_fix_addon",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "webNavigation",
+      "tabs"
+    ],
+    "description": "makeup for vulcan",
+  
+    "icons": {
+      "48": "icons/48.png"
+    },
+      "content_scripts": [
+        {
+          "matches": ["*://*.eduvulcan.pl/*"],
+          "js": ["loads.js", "fix.js"]
+        }
+      ]
+  }
+  
